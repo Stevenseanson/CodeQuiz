@@ -1,8 +1,8 @@
 // Declared variables
-let timer;
 let timeLeft = 75;
 let currentQuestion = 0;
 let score = 0;
+let timer;
 
 // Start quiz (this section will hide the starting screen and start the timer)
 
@@ -52,11 +52,12 @@ function checkAnswer(answer) {
 }
 
 // This function stops the timer and displays the score.
-function endQuiz() {
+function finishQuiz() {
 
     clearInterval(timer);
     document.getElementById("questions").style.display = "none";
     document.getElementById("end-screen").style.display = "block";
+
     document.getElementById("final-score").innerHTML = timeLeft;
 }
 
